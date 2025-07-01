@@ -33,6 +33,11 @@ const ShimmerMessages = () => {
     );
 }
 
+/**
+ * Displays a loading UI with a logo, label, and animated cycling status messages.
+ *
+ * Renders a vertically stacked container featuring a small logo and the label "Neo" at the top, followed by a dynamic message area that cycles through loading messages to indicate ongoing processing.
+ */
 export default function MessageLoading() {
     return (
         <div className="flex flex-col group px-2 pb-4">

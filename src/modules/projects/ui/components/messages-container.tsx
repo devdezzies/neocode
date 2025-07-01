@@ -8,6 +8,15 @@ import { useEffect, useRef } from "react";
 import { Fragment } from "@/generated/prisma";
 import MessageLoading from "./message-loading";
 
+/**
+ * Displays and manages the message list for a given project, supporting fragment selection and automatic updates.
+ *
+ * Fetches messages for the specified project, highlights the active fragment, and allows users to select message fragments. Automatically scrolls to the latest message and periodically refreshes the message list. Renders a loading indicator if the last message is from the user and provides a form for submitting new messages.
+ *
+ * @param projectId - The identifier of the project whose messages are displayed.
+ * @param activeFragment - The currently active message fragment, or null if none is selected.
+ * @param setActiveFragment - Function to update the active fragment.
+ */
 export default function MessagesContainer({ 
     projectId, 
     activeFragment, 

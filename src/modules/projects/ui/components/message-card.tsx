@@ -114,6 +114,11 @@ const UserMessage = ({ content }: UserMessageProps) => {
     )
 }
 
+/**
+ * Renders a chat message card, displaying either an assistant or user message based on the role.
+ *
+ * Selects the appropriate message component and passes relevant props for rendering, including content, optional fragment, timestamp, and interaction handlers.
+ */
 export default function MessageCard({
     content, role, fragment, createdAt, isActiveFragment, onFragmentClick, type
 }: MessageProps) {

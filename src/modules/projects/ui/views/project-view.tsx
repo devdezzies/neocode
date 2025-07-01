@@ -16,6 +16,13 @@ interface Props {
     projectId: string
 }
 
+/**
+ * Displays a project workspace with a resizable two-panel layout, including project details, messages, and a placeholder for web preview.
+ *
+ * The left panel shows project information and messages, supporting fragment selection and asynchronous loading. The right panel is reserved for a future web preview feature.
+ *
+ * @param projectId - The unique identifier of the project to display
+ */
 export default function ProjectView({ projectId }: Props) {
     const [activeFragment, setActiveFragment] = useState<Fragment | null>(null);
 
