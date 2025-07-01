@@ -7,6 +7,13 @@ import { useTheme } from "next-themes";
 import Image from "next/image";
 import Link from "next/link";
 
+/**
+ * Renders a project header with a dropdown menu for navigation and theme selection.
+ *
+ * Displays the project name and logo, provides a link back to the dashboard, and allows users to switch between light, dark, and system appearance themes.
+ *
+ * @param projectId - The unique identifier of the project to display in the header
+ */
 export default function ProjectHeader({ projectId }: { projectId: string }) {
     const trpc = useTRPC();
     const { data: project } = useSuspenseQuery(
