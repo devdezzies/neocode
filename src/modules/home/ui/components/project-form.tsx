@@ -41,7 +41,6 @@ export default function ProjectForm() {
                 router.push('/pricing');
             }
 
-
             toast.error(error.message);
         }
     }));
