@@ -16,10 +16,10 @@ export default async function Page({
     // PREFETCH
     void queryClient.prefetchQuery(trpc.messages.getMany.queryOptions({
         projectId: projectId
-    }))
+    }));
     void queryClient.prefetchQuery(trpc.projects.getOne.queryOptions({
         id: projectId
-    }))
+    }));
 
     return (
         <HydrationBoundary state={dehydrate(queryClient)}>
